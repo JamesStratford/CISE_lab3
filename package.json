@@ -1,0 +1,19 @@
+{
+  "name": "mern_a_to_z",
+  "version": "1.0.0",
+  "description": "cise lab 3 tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesStratford/CISE_lab3.git"
+  },
+  "author": "James Stratford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesStratford/CISE_lab3/issues"
+  },
+  "homepage": "https://github.com/JamesStratford/CISE_lab3#readme"
+}
