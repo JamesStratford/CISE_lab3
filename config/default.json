@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+        "mongodb+srv://jamess:james123@cluster0.qgriner.mongodb.net/?retryWrites=true&w=majority"
+}
