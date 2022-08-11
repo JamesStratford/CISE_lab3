@@ -7,7 +7,7 @@ class showBookDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      book: props.book
+      book: {}
     };
   }
 
