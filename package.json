@@ -6,13 +6,11 @@
   "scripts": {
     "build": "cd my-app && npm run build",
     "install-client": "cd my-app && npm install",
-    "heroku-postbuild": "cd my-app && npm install && npm run build",
-    "server": "node app.js",
+    "heroku-postbuild": "npm run install-my-app && npm run build",
+    "server": "nodemon app.js",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix my-app\"",
-    "start": "concurrently --kill-others-on-fail \"node app.js\" \"npm run start --prefix my-app\"",
-    "app": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix my-app\""
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JamesStratford/CISE_lab3.git"
