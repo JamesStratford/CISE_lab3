@@ -7,14 +7,14 @@ class showBookDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      book: {}
+      book: props.book
     };
   }
 
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://localhost:8082/api/books/'+this.props.match.params.id)
+      .get('http://localhost:8082/api/books/'+this.props.id)
       .then(res => {
         // console.log("Print-showBookDetails-API-response: " + res.data);
         this.setState({
