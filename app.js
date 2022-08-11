@@ -20,6 +20,28 @@ app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('Hello world!'));
 
+
+
+// Accessing the path module ---- Heroku deployment
+const path = require("path");
+
+// Step 1:
+if (process.env.NODE_ENV == "production") {
+  app.use(express.static(path.resolve(__dirname, "./my-app/build")));
+
+  app.get("*", function (request, response) {
+    response.sendFile(path.resolve(__dirname, "./my-app/build", "index.html"));
+  });
+}
+else {
+  app.get("/", (req, res) => {
+    res.send("Api Running");
+  })
+}
+// Step 2:
+// ------------------------------------------------
+
+
 // use Routes
 app.use('/api/books', books);
 
