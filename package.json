@@ -9,7 +9,7 @@
     "heroku-postbuild": "cd my-app && npm install && npm run build",
     "server": "node app.js",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix my-app\"",
-    "start": "node run server && concurrently --kill-others-on-fail  \"npm run start --prefix my-app\"",
+    "start": "concurrently --kill-others-on-fail \"node app.js\" \"npm run start --prefix my-app\"",
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
