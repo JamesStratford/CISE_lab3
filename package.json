@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "build": "cd my-app && npm run build",
-    "install-client": "cd my-app && npm install && npm install concurrently",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "install-client": "cd my-app && npm install",
+    "heroku-postbuild": "cd my-app && npm install && npm run build",
     "server": "nodemon app.js",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix my-app\"",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix my-app\"",
