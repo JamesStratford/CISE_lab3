@@ -20,7 +20,7 @@ class UpdateBookInfo extends Component {
     // console.log("Print id: " + this.props.match.params.id);
     let id = window.location.href.split('/')[4];
     axios
-      .get('http://localhost:8082/api/books/'+id)
+      .get('/api/books/'+id)
       .then(res => {
         // this.setState({...this.state, book: res.data})
         this.setState({
@@ -55,7 +55,7 @@ class UpdateBookInfo extends Component {
     let id = window.location.href.split('/')[4];
 
     axios
-      .put('http://localhost:8082/api/books/'+id, data)
+      .put('/api/books/'+id, data)
       .then(res => {
         this.props.history.push('/show-book/'+id);
       })
