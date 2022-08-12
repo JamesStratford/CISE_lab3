@@ -20,7 +20,8 @@ app.use(cors({ origin: true, credentials: true }));
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-
+// use Routes
+app.use('/api/books', books);
 
 // Accessing the path module ---- Heroku deployment
 // Step 1:
@@ -40,5 +41,3 @@ if (process.env.NODE_ENV === "production") {
 // Step 2:
 // ------------------------------------------------
 
-  // use Routes
-  app.use('/api/books', books);
