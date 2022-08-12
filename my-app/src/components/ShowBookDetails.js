@@ -15,7 +15,7 @@ class showBookDetails extends Component {
     // console.log("Print id: " + this.props.match.params.id);
     let id = window.location.href.split('/')[4];
     axios
-      .get('/api/books/'+id)
+      .get('http://localhost:8082/api/books/'+id)
       .then(res => {
         console.log("Print-showBookDetails-API-response: " + res.data);
         this.setState({
@@ -29,7 +29,7 @@ class showBookDetails extends Component {
 
   onDeleteClick (id) {
     axios
-      .delete('/api/books/'+id)
+      .delete('http://localhost:8082/api/books/'+id)
       .then(res => {
         this.props.history.push("/");
       })

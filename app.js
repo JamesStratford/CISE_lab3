@@ -1,6 +1,10 @@
 // app.js
 
 const express = require('express');
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+require("dotenv").config();
+
 const connectDB = require('./config/db');
 var cors = require('cors');
 
@@ -17,6 +21,8 @@ connectDB();
 // cors
 app.use(cors({ origin: true, credentials: true }));
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 // Init Middleware
 app.use(express.json({ extended: false }));
 
