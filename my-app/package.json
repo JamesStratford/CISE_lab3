@@ -37,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "process.env.PORT"
+  "proxy": "https://jamess-mern-tutorial.herokuapp.com"
 }

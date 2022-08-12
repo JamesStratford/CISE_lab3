@@ -40,13 +40,5 @@ if (process.env.NODE_ENV === "production") {
 // Step 2:
 // ------------------------------------------------
 
-
-// use Routes
-app.use('/api/books', books);
-
-app.get('/api', (req, res) => {
-  res.json({
-    message : "Api"
-  })
-})
-
+  // use Routes
+  app.use('/api/books', books);
